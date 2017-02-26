@@ -1,0 +1,47 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	border: 3px solid red;
+}
+
+footer,header{
+	padding: 20px;
+	background-color: #666;
+	color: white;
+}
+
+.container{
+	display: flex;
+	flex:1;
+	background-color: pink;
+}
+.column-1{
+	background-color: honeydew;
+	flex:1;
+}
+.column-2{
+	background-color: lightblue;
+	width: 20%;
+	order:-1;
+}
+.column-3{
+	background-color: peachpuff;
+	width: 20%;
+}
+
+@media (max-height: 500px)
+  {
+  	.wrapper{
+  		flex-direction: column;
+  	}
+  	.column-3,.column-2{
+  		height: 20%;
+  	}
+  }
