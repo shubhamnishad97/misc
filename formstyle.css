@@ -1,0 +1,42 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid red;
+	height: 100vh;
+
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	border: 3px solid lightblue;
+	
+}
+
+input{
+	border-style: none;
+	margin: 7px;
+	padding: 5px;
+	font-size: 1.25em;
+}
+
+input:focus{
+	border-bottom-style: solid;
+	border-bottom-color: red;
+	outline:none;
+
+}
+.signup{
+	width: 40%;
+	align-self: center;
+}
