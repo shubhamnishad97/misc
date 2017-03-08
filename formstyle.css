@@ -19,8 +19,8 @@ form{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	border: 3px solid lightblue;
-	
+	padding: 20px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 input{
@@ -36,7 +36,20 @@ input:focus{
 	outline:none;
 
 }
+input[type=submit]{
+	border:2px solid lightblue;
+	border-radius: 5px;
+	//box-shadow: 0 17px 10px -10px rgba(0,0,0,0.4), 0 6px 20px 0 rgba(0,0,0,0.19);
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+input[type=submit]:hover{
+	box-shadow: none;
+
+}
+
 .signup{
 	width: 40%;
 	align-self: center;
+	background-color: white;
 }
