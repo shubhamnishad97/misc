@@ -19,6 +19,7 @@ form{
 	flex-direction: column;
 	justify-content: space-around;
 	padding: 20px;
+	margin: 50px 0px;
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -36,9 +37,10 @@ input:focus{
 
 }
 input[type=submit]{
-	border:2px solid lightblue;
+	border:2px solid #6BB9F0;
+	background-color: #6BB9F0;
+	color: rgba(0,0,0,0.7);
 	border-radius: 5px;
-	//box-shadow: 0 17px 10px -10px rgba(0,0,0,0.4), 0 6px 20px 0 rgba(0,0,0,0.19);
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
