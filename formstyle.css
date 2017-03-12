@@ -10,11 +10,12 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border: 3px solid red
+	background-color: #ECF0F1;
 
 }
 
 form{
+	background-color: #F2F1EF;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -24,6 +25,7 @@ form{
 }
 
 input{
+	background-color: #F2F1EF;
 	border-style: none;
 	margin: 7px;
 	padding: 5px;
@@ -32,14 +34,14 @@ input{
 
 input:focus{
 	border-bottom-style: solid;
-	border-bottom-color: red;
+	border-bottom-color: #F7CA18;
 	outline:none;
 
 }
 input[type=submit]{
-	border:2px solid #6BB9F0;
-	background-color: #6BB9F0;
-	color: rgba(0,0,0,0.7);
+	border:2px solid #336E7B;
+	background-color: #336E7B;
+	color:#ECECEC;
 	border-radius: 5px;
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
@@ -54,15 +56,15 @@ input[type=submit]:hover{
 	align-self: center;
 	background-color: white;
 }
-
-form p{
-	font-style: bold;
-	font-size: 1.25em;
+p{
 	margin: 7px;
 	padding: 5px;
+	font-size: 1.25em;
+	font-style: bold;
 }
+.error{
+	font-size: 1.2em;
+	margin: 0px 7px;
+	padding: 1px 5px;
 
-form > section{
-	margin: 5px;
-	border:3px solid red;
 }

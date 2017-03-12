@@ -9,15 +9,75 @@
 	<script type="text/javascript" src="form.js"></script>
 </head>
 <body>
-	<form name="register" action="" method="post" onsubmit="return check()">
+	<form name="register" action="" method="post" onsubmit="return validate()">
 		<p>Register</p>
 		<input type="text" id="fullname" name="fullname" placeholder="Full name" required>
+		<div id="name_error" class="error"></div>
 		<input type="email" id="email" name="email" placeholder="Email" required>
+		<div id="email_error" class="error"></div>
 		<input type="password" id="password" name="password" placeholder="Password" required>
 		<input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm password" required>
+		<div id="password_error" class="error"></div>
 		<input type="submit" id="signup" name="signup" value="Signup" class="signup">
-		<section id="errorField" name="errorField">22</section>
 	</form>
 
+<script type="text/javascript">
+var fullname=document.getElementById("fullname");
+var email=document.getElementById("email");
+var password=document.getElementById("password");
+var confirmpassword=document.getElementById("confirmpassword");
+
+var name_error=document.getElementById("name_error");
+var email_error=document.getElementById("email_error");
+var password_error=document.getElementById("password_error");
+
+console.log(fullname.value);
+console.log(email.value);
+console.log(password.value);
+console.log(confirmpassword.value);
+console.log(name_error.innerHTML);
+console.log(email_error.innerHTML);
+console.log(password_error.innerHTML);
+
+fullname.addEventListener("blur", nameVerify, true);
+email.addEventListener("blur", emailVerify, true);
+confirmpassword.addEventListener("blur", passwordVerify, true);
+
+
+function validate(){
+if(fullname.value.length<=4){
+	name_error.textContent="full name must be >=4";
+	return false;
+}
+
+
+if (password.value != confirmpassword.value) {
+			password_error.textContent = "The two passwords do not match";
+			confirmpassword.focus();
+			return false;
+		}
+}
+
+function nameVerify(){
+		if (fullname.value != "") {
+			name_error.innerHTML = "";
+			return true;
+		}
+	}
+
+function emailVerify(){
+		if (email.value != "") {
+			email_error.innerHTML = "";
+			return true;
+		}
+	}
+
+function passwordVerify(){
+		if (confirmpassword.value != "" && password.value!="") {
+			password_error.innerHTML = "";
+			return true;
+		}
+	}	
+</script>
 </body>
 </html>
