@@ -1,0 +1,31 @@
+<html>
+<head>
+
+<style id="webmakerstyle">
+
+</style>
+</head>
+<body>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+  </body>
+</html>
+
+<script>
+var div = document.createElement('DIV');
+div.style.height = '100vh';
+document.body.appendChild(div);
+div.addEventListener('mousemove', function (event) {
+    var x = event.clientX;
+    var y = event.clientY;
+    div.textContent = x + ',' + y;
+    div.style.backgroundColor = 'rgba(' + x + ', ' + y + ', 100,.8)';
+});
+//# sourceURL=userscript.js
+</script>
+</body>
+</html>
